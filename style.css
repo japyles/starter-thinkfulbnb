@@ -65,7 +65,7 @@ header {
 
 .logo {
   font-family: "Pangolin", cursive;
-  font-size: 72px;
+  font-size: 55px;
   color: #fff;
 }
 
@@ -97,17 +97,27 @@ header nav ul li a:hover {
 }
 
 form {
+  display: flex;
+  flex-direction: column;
   border: 2px solid #ff385c;
   padding: 10px;
 }
 
 .form-input {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
 }
 
 form label {
   font-weight: bold;
+  font-size: 1em;
+}
+
+.vaca-type {
+  text-align: left;
+  font-size: 1em;
+  margin: 0;
 }
 
 form select,
@@ -138,10 +148,15 @@ footer p {
 }
 
 /* -------  Media Query ------- */
-@media all and (min-width: 480px) {
+@media all and (min-width: 801px) {
   header {
     display: flex;
     justify-content: space-between;
+    max-width: vw;
+  }
+
+  .logo {
+    font-size: 72px;
   }
 
   header nav {
@@ -157,7 +172,8 @@ footer p {
   .form-input {
     display: flex;
     flex-direction: column;
-    padding: 15px;
+    justify-content: space-between;
+    padding: 13px;
   }
 
   .form-input h2 {
